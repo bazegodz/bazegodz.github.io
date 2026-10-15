@@ -35,6 +35,35 @@ verification and stop uploads. So:
   `bazegodzpodcast@gmail.com`.
 - The app name **SOVEREIGN** and brand **BazeGodZ** must be spelled exactly like this.
 
+## Cloud sessions vs. the owner's PC (read this first)
+
+Most BazeGodZ work happens in Claude Code sessions on the owner's own PC. Those
+sessions can see the local drives, the SOVEREIGN vault (`H:\My Drive\SOVEREIGN`),
+the footage drives, Premiere and Pro Tools, and they keep memory between sessions.
+**A cloud session (claude.ai/code) sees none of that. It sees only this repo, and
+it starts with no memory of earlier work.** So, in a cloud session:
+
+**Can be done here:** edits to `index.html` and `privacy.html`, wording and design
+changes to the site, and changes to these rule files, always on a branch with a
+pull request.
+
+**Must be done on the owner's PC instead:** anything involving SOVEREIGN's code or
+scheduled jobs, YouTube uploads, video or audio editing, the shorts and long-form
+pipelines, the vault, footage, or client and business files. If a request needs
+any of these, stop and tell the owner to do it in a desktop (local) session.
+Don't try to rebuild it from scratch here.
+
+**Never ask for, accept, or commit secrets or private code.** Do not ask the owner
+to upload SOVEREIGN's code, the vault, or any file from their drives to GitHub.
+In particular, never commit `client_secret.json`, `token.json`, `*.expired*.json`,
+API keys, passwords, or anything from `08-SYSTEM/publish/` except the site pages.
+This repo is public: anything committed here is visible to the whole internet,
+even after it's deleted. If the owner offers such files, refuse and explain why.
+
+The live copy of the two site pages also exists in the vault at
+`08-SYSTEM/publish/site/`. After a change here is merged, the local session should
+copy the pages back there so the two stay identical.
+
 ## How to work here
 
 - Plain, hand-written HTML and inline CSS. No frameworks, build tools, trackers,
